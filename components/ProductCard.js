@@ -20,7 +20,7 @@ export default function ProductCard({ product }) {
               layout='fill'
               objectFit='cover'
               objectPosition='center'
-              onLoad={() => setFinished(true)}
+              onLoadingComplete={() => setFinished(true)}
               unoptimized
             />
           </div>
