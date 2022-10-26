@@ -1,0 +1,80 @@
+.product-info-container {
+    background-color: var(--color-black);
+    border-radius: 3px;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-family: var(--medium);
+    font-size: .9rem;
+    color: var(--color-white);
+}
+
+.buttons button {
+    padding: calc(var(--spacing-xs) / 4) var(--spacing-xs);
+    flex: 1;
+    text-align: left;
+    cursor: pointer;
+}
+
+.buttons button:nth-child(2) {
+    text-align: center;
+}
+.buttons button:last-child {
+    text-align: right;
+}
+
+.details-container {
+    font-size: .9rem;
+    padding: var(--spacing-sm) var(--spacing-xs);
+    padding-right: 0;
+    background-color: var(--color-white);
+}
+
+.details {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    transition: transform .3s;
+    font-family: var(--regular);
+}
+
+.details h2 {
+    margin-top: var(--spacing-sm-m);
+}
+
+.details p {
+    margin-top: var(--spacing-xs);
+}
+
+.info {
+    margin-right: var(--spacing-xs);
+    width: 100%;
+    display: none;
+    z-index: 0;
+}
+
+.info p {
+    padding: var(--spacing-xxs) 0;
+}
+
+.info h2:not(.info h2:first-child) {
+    padding-top: var(--spacing-xs);
+}
+
+.buttons button:not(.active) {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+.buttons button:not(.active):hover {
+    text-decoration: underline;
+}
+
+.active {
+    text-decoration: underline;
+    border-radius: 3px 3px 0 0;
+}

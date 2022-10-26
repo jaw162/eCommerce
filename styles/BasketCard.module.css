@@ -1,0 +1,53 @@
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 125px;
+    padding: var(--spacing-xxs) 0;
+}
+
+.image-container {
+    flex: 1;
+    border-radius: 3px;
+}
+
+.info-container {
+    flex: 2;
+    font-family: var(--regular);
+    letter-spacing: var(--letter-spacing);
+    font-size: .9rem;
+    font-weight: 100;
+    padding: 0 var(--spacing-xs);
+}
+
+.info-container p, .info-container h3, .info-container div {
+    margin-bottom: var(--spacing-xs);
+}
+
+.info-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.quantity {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    justify-content: space-between;
+    background-color: var(--color-white);
+    text-align: center;
+    border-radius: 3px;
+}
+
+.quantity aside {
+    flex: 1;
+    background-color: var(--color-grey-2);
+}
+
+.quantity button {
+    flex: 1;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+}

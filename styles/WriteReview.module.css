@@ -1,0 +1,97 @@
+.container {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    top: 0;
+    z-index: 10;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--color-grey-1);
+    font-family: var(--regular);
+}
+
+.form-container {
+    max-width: 320px;
+    max-height: 520px;
+}
+
+.cross {
+    cursor: pointer;
+}
+
+.heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.heading h2 {
+    font-size: 1.2rem;
+    width: 50%;
+}
+
+.title-box {
+    height: 44px;
+}
+
+.body-box {
+    height: 200px;
+}
+
+.title-box, .body-box {
+    background-color: var(--color-white);
+}
+
+.title-box, .body-box, .heading {
+    margin: var(--spacing-sm-m) 0;
+}
+
+.rating {
+    margin: var(--spacing-xs) 0;
+    font-size: 2rem;
+}
+
+.body-box textarea {
+    all: unset;
+}
+
+.title-box input, .body-box textarea {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: var(--spacing-xxs);
+    background-color: var(--color-white);
+}
+
+.form-container h3 {
+    font-size: 1rem;
+}
+
+.star {
+    cursor: pointer;
+}
+
+.on {
+    color: #000;
+}
+
+.off {
+    color: var(--color-grey-4);
+}
+
+.show {
+    visibility: visible;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.btn {
+    padding: var(--spacing-xs) var(--spacing-xxs);
+    background-color: #000;
+    color: #FFF;
+    cursor: pointer;
+}
