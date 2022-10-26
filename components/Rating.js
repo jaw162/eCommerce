@@ -10,7 +10,7 @@ export default function AverageRating({ rating }) {
 
   useEffect(() => {
     const array = Array.from(Array(roundedDownAverage), (x, i) => i + 1)
-    let starsSvgs = array.map(n => (
+    const starsSvgs = array.map(n => (
         <Star key={n} />
     ))
     

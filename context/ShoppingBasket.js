@@ -14,7 +14,7 @@ export const BasketProvider = ({ children }) => {
 
     useEffect(() => {
         if  (typeof window !== 'undefined') {
-            let products = JSON.parse(window.localStorage.getItem('basket'))
+            const products = JSON.parse(window.localStorage.getItem('basket'))
             if (products) {    
                 setItems(products)
             }
@@ -22,8 +22,8 @@ export const BasketProvider = ({ children }) => {
     }, [])
 
     const addItem = (product) => {
-        let formattedProduct = createBasketProduct(product)
-        let updated = items.concat(formattedProduct)
+        const formattedProduct = createBasketProduct(product)
+        const updated = items.concat(formattedProduct)
         setItems(updated)
         window.localStorage.setItem('basket', JSON.stringify(updated))
     }
@@ -83,7 +83,7 @@ export const BasketProvider = ({ children }) => {
     }
 
     const removeItem = (productId) => {
-        let updated = items.filter(item => item.id !== productId)
+        const updated = items.filter(item => item.id !== productId)
         setItems(updated)
         window.localStorage.setItem('basket', JSON.stringify(updated))
     }
