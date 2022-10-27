@@ -31,7 +31,7 @@ export default function ProductPage({ product, reviews, averageRating }) {
     if (wideViewport !== isWide) {
       setIsWide(isWide)
     }
-  }, [width])
+  }, [width, wideViewport])
 
   const alreadyAdded = items.some(item => item.id === product.id)
 

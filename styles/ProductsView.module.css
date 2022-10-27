@@ -4,6 +4,11 @@
     padding-bottom: var(--spacing-md);
 }
 
+.wrap {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
 .products-header {
     position: relative;
     display: flex;

@@ -8,6 +8,23 @@ export const BasketProvider = ({ children }) => {
     const [basketOpen, setOpen] = useState(false)
 
     useEffect(() => {
+
+        const calculateTotal = () => {
+            const total = items.reduce((a, b) => (
+                a + (b.price * b.quantity)
+            ), 0)
+    
+            return total.toFixed(2)
+        }
+    
+        const calculateTotalProducts = () => {
+            const total = items.reduce((a, b) => (
+                a + b.quantity
+            ), 0)
+    
+            return total
+        }
+        
         setTotal((prev) => ({ ...prev, price: calculateTotal() }))
         setTotal((prev) => ({ ...prev, quantity: calculateTotalProducts() }))
     }, [items])
@@ -64,22 +81,6 @@ export const BasketProvider = ({ children }) => {
             quantity: 1
         }
         return productInfo
-    }
-
-    const calculateTotal = () => {
-        const total = items.reduce((a, b) => (
-            a + (b.price * b.quantity)
-        ), 0)
-
-        return total.toFixed(2)
-    }
-
-    const calculateTotalProducts = () => {
-        const total = items.reduce((a, b) => (
-            a + b.quantity
-        ), 0)
-
-        return total
     }
 
     const removeItem = (productId) => {

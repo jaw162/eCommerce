@@ -1,11 +1,16 @@
 import Layout from "../components/Layout"
 import PickCategory from "../components/PickCategory"
+import ProductsView from "../components/ProductsView"
+import { ProductsProvider } from "../context/ProductsContext"
 import { API_URL } from '../config/index'
 
 export default function Home({ products }) {
   return (
     <Layout>
-      <PickCategory products={products} />
+      <ProductsProvider products={products}>
+        <PickCategory />
+        <ProductsView />
+      </ProductsProvider>
     </Layout>
   )
 }

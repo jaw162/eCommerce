@@ -8,7 +8,7 @@
     font-family: var(--regular);
     letter-spacing: var(--letter-spacing);
     color: #000;
-    padding: var(--spacing-xs);
+    padding: 0 var(--spacing-xs);
     background-color: var(--color-grey-2);
 }
 
@@ -20,6 +20,7 @@
 
 .image-container {
     flex: 3;
+    margin-top: var(--spacing-xs);
 }
 
 .text-box {
@@ -33,6 +34,7 @@
 .info h1 {
     font-size: 1.6rem;
     font-family: var(--medium);
+    padding-top: var(--spacing-xs);
 }
 
 .info > p {
@@ -41,7 +43,7 @@
 }
 
 .btn {
-    margin-top: var(--spacing-xs);
+    margin: var(--spacing-xs) 0;
     display: flex;
     cursor: pointer;
     align-items: center;

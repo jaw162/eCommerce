@@ -118,10 +118,6 @@
     fill: var(--color-black);
 }
 
-.category:last-child p {
-    font-size: 1rem;
-}
-
 .view-more {
     cursor: pointer;
     padding: var(--spacing-xxs) 0;
@@ -147,13 +143,17 @@
     }
 
     .categories-expand {
-        height: calc((var(--height) * 2) + var(--gap));
+        height: calc((var(--height) * 3) + var(--gap));
     }
 }
 
 @media (min-width: 549px) {
     .categories {
         grid-template-columns: repeat(5, 1fr);
+    }
+
+    .categories-expand {
+        height: calc((var(--height) * 2) + var(--gap));
     }
 }
 
@@ -176,6 +176,12 @@
 @media (min-width: 849px) {
     .categories {
         grid-template-columns: repeat(8, 1fr);
+    }
+}
+
+@media (min-width: 1050px) {
+    .categories {
+        grid-template-columns: repeat(9, 1fr);
     }
 
     .view-more {

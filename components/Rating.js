@@ -20,7 +20,7 @@ export default function AverageRating({ rating }) {
     }
 
     setStars(starsSvgs)
-  }, [])
+  }, [rating, roundedDownAverage])
 
   return (
     <div>

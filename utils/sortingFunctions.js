@@ -34,4 +34,5 @@ const sortAToZ = (array) => {
     return sorted
 }
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default { sortLToH, sortHToL, sortZToA, sortAToZ }

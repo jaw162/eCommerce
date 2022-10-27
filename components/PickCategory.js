@@ -7,41 +7,16 @@ import MicIcon from '../public/icons/device-microphone-voice.svg'
 import MouseIcon from '../public/icons/device-mouse-cursor.svg'
 import DownArrow from '../public/icons/down-arrow.svg'
 import Phone from '../public/icons/device-smartphone.svg'
-import ProductsView from "../components/ProductsView"
-import { useState } from 'react'
+import ProductsContext from '../context/ProductsContext'
+import { useContext, useState } from 'react'
 
-export default function PickCategory({ products }) {
+export default function PickCategory() {
+  const { applyFilters, clearFilters, applied, setApplied } = useContext(ProductsContext)
 
   const [clicked, setClicked] = useState(false)
-  
-  const [filteredProducts, setFiltered] = useState(products)
-
-  const [applied, setApplied] = useState({
-    Computer: false,
-    Laptop: false,
-    Mobile: false,
-    Audio: false,
-    Recording: false,
-    Accessories: false,
-    Photography: false,
-  })
 
   const handleCategoryClick = (category) => {
     setApplied({ ...applied, [category]: !applied[category] })      
-  }
-
-  const applyFilters = () => {
-    const allFilters = Object.entries(applied).filter(filter => (
-        filter[1] === true
-        ))
-    if (allFilters.length === 0) {
-        setFiltered(products)
-        return
-    }
-    const filtered = products.filter(product => (
-      allFilters.some(filter => filter[0] === product.attributes.Category)
-    ))
-    setFiltered(filtered)
   }
 
   return (
@@ -114,9 +89,15 @@ export default function PickCategory({ products }) {
                   </div>
                   <div 
                     className={styles.category}
-                    onClick={() => applyFilters()}
+                    onClick={() => applyFilters(applied)}
                   >
                       <p>Apply</p>
+                  </div>
+                  <div 
+                    className={styles.category}
+                    onClick={() => clearFilters()}
+                  >
+                      <p>Clear</p>
                   </div>
               </div>
 
@@ -128,10 +109,6 @@ export default function PickCategory({ products }) {
                   <DownArrow />
               </div>
           </div>
-          <ProductsView 
-            products={filteredProducts} 
-            allItemsLength={filteredProducts.length}
-          />
         </div>
     </div>
   )

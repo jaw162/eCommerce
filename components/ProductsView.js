@@ -1,30 +1,17 @@
 import styles from '../styles/ProductsView.module.css'
 import DownArrow from '../public/icons/down-arrow.svg'
-import { useState, useEffect } from 'react'
-import sortFn from '../utils/sortingFunctions'
+import ProductsContext from '../context/ProductsContext'
+import { useContext, useState, useEffect } from 'react'
 import Pagination from './Pagination'
 
-export default function ProductsView({ products, allItemsLength }) {
+export default function ProductsView() {
+  const { setActive, activeSort, items } = useContext(ProductsContext)
 
   const [isClicked, setClicked] = useState(false)
   
-  const [perPage, setPerPage] = useState(5)
-
-  const [activeSort, setSortStatus] = useState('')
+  const [perPage, setPerPage] = useState(2)
 
   const style = { backgroundColor: 'darkgray' }
-  
-  const [items, setItems] = useState([])
-
-  const setActive = (sort) => {
-    setItems(sortFn[sort](products))
-    setSortStatus(sort)
-  }
-
-  useEffect(() => {
-    setItems(products)
-    setSortStatus('')
-  }, [products])
 
   useEffect(() => {
     const twoColumns = window.matchMedia('(min-width: 520px)').matches
@@ -43,8 +30,9 @@ export default function ProductsView({ products, allItemsLength }) {
 
   return (
     <div className={styles.container}>
+      <div className={styles.wrap}>
         <div className={styles['products-header']}>
-            <p>{allItemsLength} results</p>
+            <p>{items.length} results</p>
             <div 
               className={styles['sort-btn']}
               onClick={() => setClicked(!isClicked)}
@@ -76,6 +64,7 @@ export default function ProductsView({ products, allItemsLength }) {
             </div>
         </div>
         <Pagination array={items} perPage={perPage} />
+      </div>
     </div>
   )
 }
