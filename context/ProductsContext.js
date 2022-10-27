@@ -25,19 +25,15 @@ export const ProductsProvider = ({ children, products }) => {
     }
 
     useEffect(() => {
-        if  (typeof window !== 'undefined') {
-            const filters = JSON.parse(sessionStorage.getItem('filters'))
-            if (filters) {    
-                setApplied(filters)
-                applyFilters(filters)
-            }
+        const filters = JSON.parse(sessionStorage.getItem('filters'))
+        if (filters) {    
+            setApplied(filters)
+            applyFilters(filters)
         }
-        if  (typeof window !== 'undefined') {
-            const sort = JSON.parse(sessionStorage.getItem('sort'))
-            if (sort) {    
-                setSortStatus(sort)
-                setActive(sort)
-            }
+        const sort = JSON.parse(sessionStorage.getItem('sort'))
+        if (sort) {    
+            setSortStatus(sort)
+            setItems((prev) => sortFn[sort](prev))
         }
     }, [])
 
