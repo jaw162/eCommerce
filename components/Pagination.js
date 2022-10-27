@@ -1,13 +1,9 @@
 import { useEffect, useState } from "react"
 import styles from '../styles/Pagination.module.css'
 import ProductCard from "./ProductCard"
-import { useRouter } from "next/router"
 
 export default function Pagination({ array, perPage }) {
-
-  const router = useRouter()
-
-  const TOTAL_PAGES = Math.ceil(array.length / perPage)
+  const totalPages = Math.ceil(array.length / perPage)
 
   const [currentPage, setPage] = useState(1)
   const [items, setItems] = useState([])
@@ -30,7 +26,7 @@ export default function Pagination({ array, perPage }) {
         {items.map(item => (
           <ProductCard key={item.id} product={item} />
         ))}
-        {currentPage < TOTAL_PAGES && 
+        {currentPage < totalPages && 
         <button 
           onClick={() => setPage(currentPage + 1)}
           className={styles.btn}

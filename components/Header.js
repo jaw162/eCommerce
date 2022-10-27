@@ -13,6 +13,9 @@ import { useScrollingUp } from '../utils/isScrollingUp'
 export default function Header() {
   const { user, logout } = useContext(AuthContext)
   const { items, total, setOpen, basketOpen } = useContext(BasketContext)
+
+  const [searchField, setSearchField] = useState('')
+
   const isScrollingUp = useScrollingUp()
 
   const router = useRouter()
@@ -31,9 +34,20 @@ export default function Header() {
         </Link> }
         <div className={styles['container-main']}>
           <Logo2 onClick={() => router.push('/')} />
-          <div className={styles['search-box']}>
-            <input type='search' placeholder='Search'/>
-          </div>
+          <form 
+            onSubmit={(e) => {
+                e.preventDefault()
+                router.push(`/search?term=${searchField}`)
+            }}
+            className={styles['search-box']}
+          >
+            <input 
+              type='search' 
+              placeholder='Search'
+              onChange={(e) => setSearchField(e.target.value)}
+            />
+            <button type='submit'></button>
+          </form>
           <ShopBag 
             onClick={() => setOpen(true)}
           />
