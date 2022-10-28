@@ -3,6 +3,7 @@ import Link from  'next/link'
 import styles from '../styles/ProductCard.module.css'
 import SkelProductCard from './SkelProductCard'
 import { useState } from 'react'
+import { setPageYOffset } from '../utils/rememberScrollPosition'
 
 export default function ProductCard({ product }) {
   const { attributes: productInfo } = product
@@ -12,7 +13,10 @@ export default function ProductCard({ product }) {
 
   return (
     <Link href={`/product/${product.attributes.slug}`}>
-      <a className={styles.container}>
+      <a 
+        className={styles.container}
+        onClick={() => setPageYOffset()}
+      >
           <div className={styles.image}>
             <Image 
               src={image.medium.url}

@@ -9,6 +9,7 @@ import { useRouter } from 'next/router'
 import Cross from '../public/icons/cross.svg'
 import ShoppingBasketCard from './ShoppingBasketCard'
 import { useScrollingUp } from '../utils/isScrollingUp'
+import { resetPosition } from '../utils/rememberScrollPosition'
 
 export default function Header() {
   const { user, logout } = useContext(AuthContext)
@@ -33,7 +34,10 @@ export default function Header() {
           </a>
         </Link> }
         <div className={styles['container-main']}>
-          <Logo2 onClick={() => router.push('/')} />
+          <Logo2 onClick={() => {
+              resetPosition()
+              router.push('/')
+            }} />
           <form 
             onSubmit={(e) => {
                 e.preventDefault()
