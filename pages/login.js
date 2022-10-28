@@ -25,7 +25,7 @@ export default function LoginPage() {
           <h1>Login</h1>
           <div className={styles['test-credentials']}>
             <p>Test Credentials</p>
-            <p>Username: <strong>Test</strong></p>
+            <p>Username: <strong>test</strong></p>
             <p>Password: <strong>test123</strong></p>
           </div>
           <form onSubmit={(e) => login(e, form)}>

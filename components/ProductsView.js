@@ -9,7 +9,7 @@ export default function ProductsView() {
 
   const [isClicked, setClicked] = useState(false)
   
-  const [perPage, setPerPage] = useState(5)
+  const [perPage, setPerPage] = useState(2)
 
   const style = { backgroundColor: 'darkgray' }
 

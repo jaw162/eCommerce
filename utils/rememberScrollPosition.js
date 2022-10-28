@@ -8,9 +8,10 @@ export const setPageYOffset = () => {
 }
 
 export const getPositionFromStorage = () => {
-  return Number(sessionStorage.getItem('position'))
+  setTimeout(() => resetPosition(), 2000)
+  return sessionStorage.getItem('position')
 }
 
 export const resetPosition = () => {
-  sessionStorage.setItem('position', 0)
+  sessionStorage.removeItem('position')
 }
