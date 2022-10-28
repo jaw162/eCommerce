@@ -8,7 +8,6 @@ export const setPageYOffset = () => {
 }
 
 export const getPositionFromStorage = () => {
-  setTimeout(() => resetPosition(), 2000)
   return sessionStorage.getItem('position')
 }
 

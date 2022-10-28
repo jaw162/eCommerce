@@ -2,7 +2,7 @@ import { useEffect, useState, useLayoutEffect } from "react"
 import styles from '../styles/Pagination.module.css'
 import ProductCard from "./ProductCard"
 import { useRouter } from 'next/router'
-import { getPositionFromStorage } from "../utils/rememberScrollPosition"
+import { getPositionFromStorage, resetPosition } from "../utils/rememberScrollPosition"
 
 export default function Pagination({ array, perPage }) {
   const totalPages = Math.ceil(array.length / perPage)
@@ -26,7 +26,11 @@ export default function Pagination({ array, perPage }) {
   }, [currentPage, array, perPage])
 
   useEffect(() => {
-    if (getPositionFromStorage()) window.scrollTo(0, getPositionFromStorage())
+    const yPosition = getPositionFromStorage()
+    if (yPosition) {
+      window.scrollTo(0, yPosition)
+      setTimeout(() => resetPosition(), 1000) 
+    }
   }, [items])
 
   return (
