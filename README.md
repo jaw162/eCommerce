@@ -8,7 +8,7 @@ As for the frontend there are very few dependencies so it should be as straight 
 
     "cookie": "^0.5.0"
     
-This package was used for authentication, mainly so that the bearer tokens would be http-only cookies.
+This package was used for authentication, that the bearer tokens would be stored as http-only cookies.
 
     "react-toastify": "^9.0.8"
     
@@ -29,3 +29,5 @@ This is a simple frontend made using React, Next.js and CSS, with HTML being uti
 -[Hyperice](https://hyperice.com/)
 
 -[Mammut](https://www.mammut.com/uk/en/category/5818-10/clothing)
+
+While I am pleased with the design, I had some issues with the UX which I'm still not fully happy with. Returning to the previous scroll position on return turned out to be trickier than expected and I couldn't figure out how popular shopping sites did this themselves. I also had some issues with the filtering, sort and pagination which I (hopefully) resolved by refactoring the code into its own useContext file. This may or may not have been less confusing but I will let you decide for yourself, as both versions are viewable on the current version and previous commits. 
