@@ -12,7 +12,7 @@ This package was used for authentication, that the bearer tokens would be stored
 
     "react-toastify": "^9.0.8"
     
-This package was used for notifications for the user when making CRUD operations in the review sections of the products. 
+This package was used for notifications for the user when making CRUD operations in the review sections of the products. This was mainly used for convenience-sake while I was trying to implement the CRUD functionality on the front and back end.
 
 As for the backend this will require more configuration, mainly due to the fact that you'll need a cloudinary account and some images for the products. The two packages needed are cloudinary-upload-provider and slugify, but these should be installed easily using
 
@@ -47,6 +47,8 @@ As for the technology used, I thought the easy dev experience of React and the f
 -User dashboard
 
 -Saved/favourite items for users
+
+-Custom toaster notifications
 
 ### License
 
