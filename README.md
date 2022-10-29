@@ -20,4 +20,12 @@ As for the backend this will require more configuration, mainly due to the fact 
     
 at the root directory once you have cloned it, as the code has already been configured.
 
-###
+### Description
+
+This is a simple frontend made using React, Next.js and CSS, with HTML being utilised through the power of Next's SSG (important for any business that has an online presence and needs to appear in search engine results). The design for the site was inspired from a few sources which I will list below: 
+
+-[Vendure Storefront](https://remix-storefront.vendure.io/)
+
+-[Hyperice](https://hyperice.com/)
+
+-[Mammut](https://www.mammut.com/uk/en/category/5818-10/clothing)
