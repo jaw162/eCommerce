@@ -36,7 +36,7 @@ I also had some issues with the filtering, sort and pagination which I (hopefull
 
 Everything else thankfully went pretty smoothly, although in the future I think I will definitely be using a CSS framework as I find writing CSS, even with the help of CSS modules in React, to be quite time-consuming and cumbersome.
 
-As for the technology used, I thought the easy dev experience of React and the fast user experience of Next.js was a no-brainer for something potentially as tricky as an eCommerce site.
+As for the technology used, I thought the easy dev experience of React and the fast user experience of Next.js was a no-brainer for something potentially as tricky as an eCommerce site. Also, a headless CMS like Strapi made the most sense because this would be extremely easy for non-programmers to use and maintain the site themselves.
 
 ## Still to-do
 
