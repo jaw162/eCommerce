@@ -7,6 +7,7 @@ import BasketContext from '../context/ShoppingBasket'
 import { useContext, useState } from 'react'
 import { useRouter } from 'next/router'
 import Cross from '../public/icons/cross.svg'
+import GitLogo from '../public/gitLogo.svg'
 import ShoppingBasketCard from './ShoppingBasketCard'
 import { useScrollingUp } from '../utils/isScrollingUp'
 import { resetPosition } from '../utils/rememberScrollPosition'
@@ -24,15 +25,24 @@ export default function Header() {
   return (
     <header className={`${styles.header} ${isScrollingUp ? styles.sticky : ''}`}>
       <div className={styles.wrap}>
-        {user ?
-        <a className={styles['sign-in']}>
-          <p className={styles['welcome-message']}>Welcome {user.username}</p><p className={styles['log-out-btn']} onClick={() => logout()}>Log Out</p>
-        </a> :
-        <Link href='/login'>
-          <a className={styles['sign-in']}>
-            Sign In
+        <div className={styles['header-first-section']}>
+          <a 
+            className={styles['git-link']}
+            href='https://github.com/jaw162/eCommerce'
+          >
+            <GitLogo />
+            <p>github.com/jaw162/eCommerce</p>
           </a>
-        </Link> }
+          {user ?
+          <a className={styles['sign-in']}>
+            <p className={styles['welcome-message']}>Welcome {user.username}</p><p className={styles['log-out-btn']} onClick={() => logout()}>Log Out</p>
+          </a> :
+          <Link href='/login'>
+            <a className={styles['sign-in']}>
+              Sign In
+            </a>
+          </Link> }
+        </div>
         <div className={styles['container-main']}>
           <Logo2 onClick={() => {
               resetPosition()

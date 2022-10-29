@@ -23,13 +23,39 @@
     justify-content: space-evenly;
 }
 
+.header-first-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.header-first-section svg {
+    height: 20px;
+    fill: var(--color-black);
+    padding-right: var(--spacing-xxs);
+}
+
+.git-link {
+    display: flex;
+    align-items: center;
+    font-size: .8rem;
+    color: var(--color-black);
+    font-family: var(--regular);
+    flex-direction: row;
+    cursor: pointer;
+}
+
+.git-link:hover svg, .git-link:hover p {
+    fill: blue;
+    color: blue;
+}
+
 .sign-in {
     font-family: var(--regular);
     color: var(--color-grey-8);
     font-weight: 100;
     font-size: .8rem;
-    display: flex;
-    align-self: flex-end;
 }
 
 .log-out-btn {
