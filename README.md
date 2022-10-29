@@ -2,7 +2,7 @@
 
 ##### Made with Next.js and Strapi
 
-### Getting started
+## Getting started
 
 As for the frontend there are very few dependencies so it should be as straight forward as running npm install in the root directory. 
 
@@ -20,7 +20,7 @@ As for the backend this will require more configuration, mainly due to the fact 
     
 at the root directory once you have cloned it, as the code has already been configured.
 
-### Description
+## Description
 
 This is a simple frontend made using React, Next.js and CSS, with HTML being utilised through the power of Next's SSG (important for any business that has an online presence and needs to appear in search engine results). The design for the site was inspired from a few sources which I will list below: 
 
@@ -34,7 +34,7 @@ While I am pleased with the design, I had some issues with the UX which I'm stil
 
 As for the technology used, I thought the easy dev experience of React and the fast user experience of Next.js was a no-brainer for something potentially as tricky as an eCommerce site.
 
-### Still to-do
+## Still to-do
 
 -Search bar preview pane on dropdown and user input
 
@@ -50,6 +50,6 @@ As for the technology used, I thought the easy dev experience of React and the f
 
 -Custom toaster notifications
 
-### License
+## License
 
 MIT
