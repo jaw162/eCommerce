@@ -30,7 +30,11 @@ This is a simple frontend made using React, Next.js and CSS, with HTML being uti
 
 -[Mammut](https://www.mammut.com/uk/en/category/5818-10/clothing)
 
-While I am pleased with the design, I had some issues with the UX which I'm still not fully happy with. Returning to the previous scroll position on return turned out to be trickier than expected and I couldn't figure out how popular shopping sites did this themselves. I also had some issues with the filtering, sort and pagination which I (hopefully) resolved by refactoring the code into its own useContext hook (the issue being that props were being passed into several components with the impact of user interaction on each part getting very confusing). This solution may or may not have been less confusing but I will let you decide for yourself, as both versions are viewable on the current version and previous commits. Everything else thankfully went pretty smoothly, although in the future I think I will definitely be using a CSS framework as I find writing CSS, even with the help off CSS modules in React to be quite time-consuming and cumbersome.
+While I am pleased with the design, I had some issues with the UX which I'm still not fully happy with. Returning to the previous scroll position on return turned out to be trickier than expected and I couldn't figure out how popular shopping sites did this themselves. 
+
+I also had some issues with the filtering, sort and pagination which I (hopefully) resolved by refactoring the code into its own useContext hook (the issue being that props were being passed into several components with the impact of user interaction on each part getting very confusing). This solution may or may not have been less confusing but I will let you decide for yourself, as both versions are viewable on the current version and previous commits. 
+
+Everything else thankfully went pretty smoothly, although in the future I think I will definitely be using a CSS framework as I find writing CSS, even with the help of CSS modules in React, to be quite time-consuming and cumbersome.
 
 As for the technology used, I thought the easy dev experience of React and the fast user experience of Next.js was a no-brainer for something potentially as tricky as an eCommerce site.
 
