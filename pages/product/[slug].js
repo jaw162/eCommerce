@@ -149,6 +149,6 @@ export async function getStaticPaths() {
         reviews,
         averageRating
       },
-      revalidate: 62,
+      revalidate: 10,
     }
   }
