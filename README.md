@@ -18,7 +18,7 @@ As for the backend this will require more configuration, mainly due to the fact 
 
     npm install
     
-at the root directory once you have cloned it, as the code has already been configured. This Strapi backend can be found here: [Github](https://github.com/jaw162/eCommerce-strapi-backend)
+at the root directory once you have cloned it, as the code has already been configured (however you will need to add your Cloudinary API keys in an .env file at the root directory). This Strapi backend can be found here: [Github](https://github.com/jaw162/eCommerce-strapi-backend)
 
 ## Description
 
