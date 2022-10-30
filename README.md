@@ -38,6 +38,10 @@ Everything else thankfully went pretty smoothly, although in the future I think 
 
 As for the technology used, I thought the easy dev experience of React and the fast user experience of Next.js was a no-brainer for something potentially as tricky as an eCommerce site. Also, a headless CMS like Strapi made the most sense because this would be extremely easy for non-programmers to use and maintain the site themselves.
 
+## Mentions
+
+Again [Kaboom](https://kaboompics.com/) was used for most of the images, with [Unsplash](https://unsplash.com/) used for the bluetooth keyboard image.
+
 ## Still to-do
 
 -Search bar preview pane on dropdown and user input
