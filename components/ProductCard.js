@@ -19,7 +19,7 @@ export default function ProductCard({ product }) {
       >
           <div className={styles.image}>
             <Image 
-              src={image.medium.url}
+              src={process.env.NODE_ENV === 'development' ? 'https://picsum.photos/300' : image.medium.url}
               alt={productInfo.name}
               layout='fill'
               objectFit='cover'

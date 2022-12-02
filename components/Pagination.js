@@ -21,7 +21,9 @@ export default function Pagination({ array, perPage }) {
   
   useLayoutEffect(() => {
     const nextPage = array.slice(0, (perPage * currentPage))
-    setItems(nextPage)
+    setItems(nextPage.map(item => (
+      <ProductCard key={item.id} product={item} />
+    )))
     sessionStorage.setItem('page', currentPage)
   }, [currentPage, array, perPage])
 
@@ -29,15 +31,14 @@ export default function Pagination({ array, perPage }) {
     const yPosition = getPositionFromStorage()
     if (yPosition) {
       window.scrollTo(0, yPosition)
-      setTimeout(() => resetPosition(), 1000) 
+      setTimeout(() => resetPosition(), 500) 
     }
+    return () => clearTimeout()
   }, [items])
 
   return (
     <div className={styles.container}>
-        {items.map(item => (
-          <ProductCard key={item.id} product={item} />
-        ))}
+        {items}
         {currentPage < totalPages && 
         <button 
           onClick={() => setPage(currentPage + 1)}
