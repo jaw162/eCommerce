@@ -18,7 +18,7 @@ As for the backend this will require more configuration, mainly due to the fact 
 
     npm install
     
-at the root directory once you have cloned it, as the code has already been configured. This Strapi backend can be found here: [Github](https://github.com/jaw162/eCommerce-strapi-backend)
+at the root directory once you have cloned it, as the code has already been configured (however you will need to add your Cloudinary API keys in an .env file at the root directory). This Strapi backend can be found here: [Github](https://github.com/jaw162/eCommerce-strapi-backend)
 
 ## Description
 
@@ -37,6 +37,10 @@ I also had some issues with the filtering, sort and pagination which I (hopefull
 Everything else thankfully went pretty smoothly, although in the future I think I will definitely be using a CSS framework as I find writing CSS, even with the help of CSS modules in React, to be quite time-consuming and cumbersome.
 
 As for the technology used, I thought the easy dev experience of React and the fast user experience of Next.js was a no-brainer for something potentially as tricky as an eCommerce site. Also, a headless CMS like Strapi made the most sense because this would be extremely easy for non-programmers to use and maintain the site themselves.
+
+## Mentions
+
+Again [Kaboom](https://kaboompics.com/) was used for most of the images, with [Unsplash](https://unsplash.com/) used for the bluetooth keyboard image.
 
 ## Still to-do
 
