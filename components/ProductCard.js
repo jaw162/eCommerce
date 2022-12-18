@@ -28,10 +28,11 @@ export default function ProductCard({ product }) {
               unoptimized
             />
           </div>
+        {finishedLoading ? 
           <div className={styles.info}>  
             <p>{productInfo.Name}</p>
             <p>£{productInfo.Price}</p>
-          </div>
+          </div> : null}
         {finishedLoading ? null : <SkelProductCard />}
       </a>
     </Link>
