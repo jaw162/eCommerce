@@ -42,22 +42,6 @@ As for the technology used, I thought the easy dev experience of React and the f
 
 Again [Kaboom](https://kaboompics.com/) was used for most of the images, with [Unsplash](https://unsplash.com/) used for the bluetooth keyboard image.
 
-## Still to-do
-
--Search bar preview pane on dropdown and user input
-
--404 page
-
--Checkout page
-
--Stripe integration
-
--User dashboard
-
--Saved/favourite items for users
-
--Custom toaster notifications
-
 ## License
 
 MIT
